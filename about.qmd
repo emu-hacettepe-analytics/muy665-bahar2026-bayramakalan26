@@ -11,14 +11,14 @@ sidebar: false
 
 # Eğitim
 
--   B.S., Fırat University, Turkey, 2002 - 2009.
+-   B.S., Electric-Electronic Engineering, Fırat University, Turkey, 2002 - 2009.
 -   M.S., Industrial Engineering, Hacettepe University, Turkey, 2026 - ongoing.
 
 # İş Tecrübesi
 
 ## Employements
 
-1.  Türk Telekom, Senior Network Engineer, 2010-2016
+1.  Türk Telekom, Network Engineer, 2010-2016
 
 2.  ATOS, Senior Network Engineer, 2016-2017
 
