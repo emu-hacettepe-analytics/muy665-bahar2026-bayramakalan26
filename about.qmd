@@ -14,9 +14,13 @@ sidebar: false
 
 ## Employements
 
-1.  Firm xxx, position xx, year xxx
+1.  Türk Telekom, Senior Network Engineer, 2010-2016
 
-2.  Firm yyy, position yyy, year yyy
+2.  ATOS, Senior Network Engineer, 2016-2017
+
+3.  Techsquare IT Solutions, Consultant, 2017-2021
+
+4.  BİTES Aerospace&Defence, Systems Engineering Group Lead, 2021-On Going
 
 ## Internships
 
