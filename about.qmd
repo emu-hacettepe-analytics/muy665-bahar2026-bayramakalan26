@@ -7,9 +7,8 @@ sidebar: false
 
 # Eğitim
 
--   B.S., ................................., ....................................University, Turkey, 20xx - 20xx.
--   M.S., Industrial Engineering, Hacettepe University, Turkey, 20xx - ongoing.
--   Ph.D.., Industrial Engineering, Hacettepe University, Turkey, 20xx - ongoing.
+-   B.S., Fırat University, Turkey, 2002 - 2009.
+-   M.S., Industrial Engineering, Hacettepe University, Turkey, 2026 - ongoing.
 
 # İş Tecrübesi
 
