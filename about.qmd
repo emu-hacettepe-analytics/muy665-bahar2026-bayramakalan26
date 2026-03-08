@@ -1,9 +1,13 @@
+```{r}
+
+```
+
 ---
 title: "Hakkımda"
 sidebar: false 
 ---
 
-![](assets/images/vesikalik.jpeg){fig-align="center"}
+![](images/bayramakalan26-vesikalik.jpeg){fig-align="center"}
 
 # Eğitim
 
@@ -24,9 +28,9 @@ sidebar: false
 
 ## Internships
 
-1.  Firm aaa, position xx, year xxx
+1.  Türk Telekom A.Ş., İntern Engineer, 2004
 
-2.  Firm bbb, position yyy, year yyy
+2.  Keban HES, İntern Engineer, 2005
 
 # Projects
 

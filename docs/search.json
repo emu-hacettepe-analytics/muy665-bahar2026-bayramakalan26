@@ -1,19 +1,5 @@
 [
   {
-    "objectID": "about.html#employements",
-    "href": "about.html#employements",
-    "title": "Hakkımda",
-    "section": "Employements",
-    "text": "Employements\n\nTürk Telekom, Senior Network Engineer, 2010-2016\nATOS, Senior Network Engineer, 2016-2017\nTechsquare IT Solutions, Consultant, 2017-2021\nBİTES Aerospace&Defence, Systems Engineering Group Lead, 2021-On Going"
-  },
-  {
-    "objectID": "about.html#internships",
-    "href": "about.html#internships",
-    "title": "Hakkımda",
-    "section": "Internships",
-    "text": "Internships\n\nFirm aaa, position xx, year xxx\nFirm bbb, position yyy, year yyy"
-  },
-  {
     "objectID": "proje.html",
     "href": "proje.html",
     "title": "Proje X (proje adını yazınız)",
@@ -117,6 +103,27 @@
     ]
   },
   {
+    "objectID": "about.html#employements",
+    "href": "about.html#employements",
+    "title": "Hakkımda",
+    "section": "Employements",
+    "text": "Employements\n\nTürk Telekom, Senior Network Engineer, 2010-2016\nATOS, Senior Network Engineer, 2016-2017\nTechsquare IT Solutions, Consultant, 2017-2021\nBİTES Aerospace&Defence, Systems Engineering Group Lead, 2021-On Going"
+  },
+  {
+    "objectID": "about.html#internships",
+    "href": "about.html#internships",
+    "title": "Hakkımda",
+    "section": "Internships",
+    "text": "Internships\n\nTürk Telekom A.Ş., İntern Engineer, 2004\nKeban HES, İntern Engineer, 2005"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Analitik sayfama hoş geldiniz",
+    "section": "",
+    "text": "MUY660-İş Analitiği dersi sayfama hoş geldiniz.\nBu analitik çalışmalarımızı paylaşıyorum.\n\n\n\n Back to top"
+  },
+  {
     "objectID": "portfolyo/calisma2.html",
     "href": "portfolyo/calisma2.html",
     "title": "Çalışma 2",
@@ -152,12 +159,5 @@
     "title": "My Blog",
     "section": "",
     "text": "Bu sayfa yapım aşamasındadır.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Analitik sayfama hoş geldiniz",
-    "section": "",
-    "text": "MUY660-İş Analitiği dersi sayfama hoş geldiniz.\nBu analitik çalışmalarımızı paylaşıyorum.\n\n\n\n Back to top"
   }
 ]
