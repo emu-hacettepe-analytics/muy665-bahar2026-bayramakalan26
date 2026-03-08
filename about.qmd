@@ -34,14 +34,16 @@ sidebar: false
 
 # Projects
 
-1.  TUBİTAK 1001..........................
+1.  
 
 # Publications
 
-1.  Dasdemir, E., Batta, R., Koksalan, M., Tezcaner Ozturk, D. (2022) “UAV Routing for Reconnaissance Mission: A Multi-Objective Orienteering Problem with Time-Dependent Prizes and Multiple Connections”, Computers & Operations Research, 145: 105882.
+1.  
 
 # Competencies
 
 R, Quarto, Git, Python
 
 # Hobbies
+
+Fishing, Motorcycles, Nature Sports.
