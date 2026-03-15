@@ -34,11 +34,11 @@ sidebar: false
 
 # Projects
 
-1.  
+1.  ----
 
 # Publications
 
-1.  
+1.  ----
 
 # Competencies
 
