@@ -34,11 +34,19 @@ sidebar: false
 
 # Projects
 
+<<<<<<< HEAD
 1.  xxxxx
 
 # Publications
 
 1.  yyyyy
+=======
+1.  ----
+
+# Publications
+
+1.  ----
+>>>>>>> 61c13fa9e7bf83f2c3a96829dc545ce0cf07e742
 
 # Competencies
 
