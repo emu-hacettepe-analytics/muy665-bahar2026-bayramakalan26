@@ -2,9 +2,9 @@
 title: "Çalışma 1"
 ---
 
-## (a) [Videonun Kısa Özeti](https://www.youtube.com/watch?v=tV_0pHSdLAM)
+## (3a) [Videonun Kısa Özeti](https://www.youtube.com/watch?v=tV_0pHSdLAM)
 
-[Video](https://www.youtube.com/watch?v=tV_0pHSdLAM), **veri bilimi ile endüstri mühendisliğinin kesişimi ve bu alanda kariyer yapmak isteyenler için tavsiyeler** üzerine yapılan bir sohbet/röportaj formatında. Baykal HAFIZOĞLU ve Erdi DAŞDEMİR beyler, kendi deneyimleri üzerinden hem akademik hem sektör tarafını anlatıyor.
+[Video](https://www.youtube.com/watch?v=tV_0pHSdLAM), veri bilimi ile endüstri mühendisliğinin kesişimi ve bu alanda kariyer yapmak isteyenler için tavsiyeler üzerine yapılan bir sohbet/röportaj formatında. Baykal HAFIZOĞLU ve Erdi DAŞDEMİR beyler, kendi deneyimleri üzerinden hem akademik hem sektör tarafını anlatıyor.
 
 ## Videoda İşlenen Ana Konular
 
@@ -61,7 +61,7 @@ Konuşmacılar:
 Özetle video;\
 veri bilimi alanının ne olduğu, endüstri mühendisliği ile bağlantısı, bu alanda çalışmak için gerekli yetkinlikler ve kariyer tavsiyeleri üzerine yapılan bir sohbet niteliğinde.
 
-## (b) Videodan üretilen Sorular
+## (3b) Videodan üretilen Sorular
 
 ## 1-Açık Uçlu Soru
 
