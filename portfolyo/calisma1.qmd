@@ -2,15 +2,88 @@
 title: "Çalışma 1"
 ---
 
-\
-(Aşağıdakiler örnek olarak verilmiştir.)
+## (a) Videonun Kısa Özeti
 
-Bu çalışmada 3 görevimiz var. Bu görevler..... Bunlara sırayla aşağıda cevap arıyoruz.
+Video, **veri bilimi ile endüstri mühendisliğinin kesişimi ve bu alanda kariyer yapmak isteyenler için tavsiyeler** üzerine yapılan bir sohbet/röportaj formatında. Baykal HAFIZOĞLU ve Erdi DAŞDEMİR beyler, kendi deneyimleri üzerinden hem akademik hem sektör tarafını anlatıyor.
 
-## (a)
+## Videoda İşlenen Ana Konular
 
-```{r}
-1 + 1
-```
+### 1. Veri bilimi nedir ve neden önemli?
+
+Günümüzde şirketlerin çok büyük miktarda veri topladığı anlatılıyor.
+
+Bu verilerin analiz edilmesi ve karar destek sistemlerine dönüştürülmesi veri biliminin temel amacı.
+
+Veri bilimi; istatistik, programlama ve iş bilgisi gibi alanların birleşimi olarak açıklanıyor.
+
+### 2. Endüstri mühendisliği ile veri bilimi ilişkisi 
+
+Endüstri mühendisliğinin zaten optimizasyon, istatistik ve sistem analizi gibi temelleri olduğu için veri bilimine yakın olduğu vurgulanıyor.
+
+Bu nedenle birçok endüstri mühendisi data analyst, data scientist veya business analyst gibi rollere geçebiliyor.
+
+### 3. Veri bilimi alanında gerekli beceriler
+
+Sohbette özellikle şu beceriler öne çıkarılıyor:
+
+-   İstatistik ve olasılık bilgisi
+
+-   Programlama (Python, R vb.)
+
+-   SQL ve veri tabanı bilgisi
+
+-   Makine öğrenmesi ve veri analizi
+
+-   İngilizce ve iletişim becerileri
+
+### 4. Kariyer ve sektör deneyimleri
+
+Konuşmacılar:
+
+-   Türkiye’de veri bilimi alanındaki iş fırsatlarını,
+
+-   Şirketlerde veri biliminin nasıl kullanıldığını,
+
+-   Yeni mezunların nasıl kendini geliştirebileceğini anlatıyor.
+
+### 5. Öğrencilere tavsiyeler
+
+Özellikle şu öneriler veriliyor:
+
+-   Üniversite sırasında projeler yapmak,
+
+-   Staj ve gerçek veriyle çalışma deneyimi kazanmak,
+
+-   GitHub/portföy oluşturmak,
+
+-    Matematik ve istatistik temelini güçlü tutmak.
+
+Özetle video;\
+veri bilimi alanının ne olduğu, endüstri mühendisliği ile bağlantısı, bu alanda çalışmak için gerekli yetkinlikler ve kariyer tavsiyeleri üzerine yapılan bir sohbet niteliğinde.
 
 ## (b)
+
+## 1-Açık Uçlu Soru
+
+**Soru:**\
+Veri bilimi ile endüstri mühendisliği arasındaki ilişkiyi açıklayınız. Endüstri mühendisliği eğitiminin veri bilimi alanında çalışmak isteyen birine hangi açılardan avantaj sağladığını örneklerle belirtiniz.
+
+**Cevap :**\
+
+Endüstri mühendisliği; istatistik, optimizasyon, sistem analizi ve karar verme yöntemleri gibi alanları içerir. Bu konular veri biliminin temelini oluşturan veri analizi ve modelleme süreçleriyle doğrudan ilişkilidir. Endüstri mühendisleri veri analizi yaparak süreçleri optimize etmeye ve karar destek sistemleri geliştirmeye alışkın oldukları için veri bilimi alanına daha kolay adapte olabilirler. Ayrıca problem çözme, süreç iyileştirme ve iş süreçlerini anlama becerileri veri biliminde önemli avantaj sağlar.
+
+## 2-Çoktan Seçmeli Soru
+
+**Soru:**\
+Aşağıdakilerden hangisi veri bilimi alanında çalışmak için önemli görülen becerilerden biri **değildir**?
+
+A\) İstatistik ve olasılık bilgisi\
+B) Programlama bilgisi (Python, R vb.)\
+C) Veri tabanı ve SQL bilgisi\
+D) Mekanik makine tasarımı
+
+**Doğru Cevap:**\
+D) Mekanik makine tasarımı
+
+**Açıklama:**\
+Veri bilimi alanında istatistik, programlama ve veri tabanı bilgisi önemliyken mekanik makine tasarımı doğrudan gerekli bir beceri değildir.

@@ -77,7 +77,7 @@
     "href": "portfolyo/calisma1.html",
     "title": "Çalışma 1",
     "section": "",
-    "text": "(Aşağıdakiler örnek olarak verilmiştir.)\nBu çalışmada 3 görevimiz var. Bu görevler….. Bunlara sırayla aşağıda cevap arıyoruz.",
+    "text": "Video, veri bilimi ile endüstri mühendisliğinin kesişimi ve bu alanda kariyer yapmak isteyenler için tavsiyeler üzerine yapılan bir sohbet/röportaj formatında. Baykal HAFIZOĞLU ve Erdi DAŞDEMİR beyler, kendi deneyimleri üzerinden hem akademik hem sektör tarafını anlatıyor.",
     "crumbs": [
       "Çalışma 1"
     ]
@@ -173,5 +173,45 @@
     "title": "Hakkımda",
     "section": "# Publications",
     "text": "# Publications"
+  },
+  {
+    "objectID": "portfolyo/calisma1.html#a-videonun-kısa-özeti",
+    "href": "portfolyo/calisma1.html#a-videonun-kısa-özeti",
+    "title": "Çalışma 1",
+    "section": "",
+    "text": "Video, veri bilimi ile endüstri mühendisliğinin kesişimi ve bu alanda kariyer yapmak isteyenler için tavsiyeler üzerine yapılan bir sohbet/röportaj formatında. Baykal HAFIZOĞLU ve Erdi DAŞDEMİR beyler, kendi deneyimleri üzerinden hem akademik hem sektör tarafını anlatıyor.",
+    "crumbs": [
+      "Çalışma 1"
+    ]
+  },
+  {
+    "objectID": "portfolyo/calisma1.html#videoda-işlenen-ana-konular",
+    "href": "portfolyo/calisma1.html#videoda-işlenen-ana-konular",
+    "title": "Çalışma 1",
+    "section": "Videoda İşlenen Ana Konular",
+    "text": "Videoda İşlenen Ana Konular\n\n1. Veri bilimi nedir ve neden önemli?\nGünümüzde şirketlerin çok büyük miktarda veri topladığı anlatılıyor.\nBu verilerin analiz edilmesi ve karar destek sistemlerine dönüştürülmesi veri biliminin temel amacı.\nVeri bilimi; istatistik, programlama ve iş bilgisi gibi alanların birleşimi olarak açıklanıyor.\n\n\n2. Endüstri mühendisliği ile veri bilimi ilişkisi\nEndüstri mühendisliğinin zaten optimizasyon, istatistik ve sistem analizi gibi temelleri olduğu için veri bilimine yakın olduğu vurgulanıyor.\nBu nedenle birçok endüstri mühendisi data analyst, data scientist veya business analyst gibi rollere geçebiliyor.\n\n\n3. Veri bilimi alanında gerekli beceriler\nSohbette özellikle şu beceriler öne çıkarılıyor:\n\nİstatistik ve olasılık bilgisi\nProgramlama (Python, R vb.)\nSQL ve veri tabanı bilgisi\nMakine öğrenmesi ve veri analizi\nİngilizce ve iletişim becerileri\n\n\n\n4. Kariyer ve sektör deneyimleri\nKonuşmacılar:\n\nTürkiye’de veri bilimi alanındaki iş fırsatlarını,\nŞirketlerde veri biliminin nasıl kullanıldığını,\nYeni mezunların nasıl kendini geliştirebileceğini anlatıyor.\n\n\n\n5. Öğrencilere tavsiyeler\nÖzellikle şu öneriler veriliyor:\n\nÜniversite sırasında projeler yapmak,\nStaj ve gerçek veriyle çalışma deneyimi kazanmak,\nGitHub/portföy oluşturmak,\nMatematik ve istatistik temelini güçlü tutmak.\n\nÖzetle video;\nveri bilimi alanının ne olduğu, endüstri mühendisliği ile bağlantısı, bu alanda çalışmak için gerekli yetkinlikler ve kariyer tavsiyeleri üzerine yapılan bir sohbet niteliğinde.",
+    "crumbs": [
+      "Çalışma 1"
+    ]
+  },
+  {
+    "objectID": "portfolyo/calisma1.html#açık-uçlu-soru",
+    "href": "portfolyo/calisma1.html#açık-uçlu-soru",
+    "title": "Çalışma 1",
+    "section": "1-Açık Uçlu Soru",
+    "text": "1-Açık Uçlu Soru\nSoru:\nVeri bilimi ile endüstri mühendisliği arasındaki ilişkiyi açıklayınız. Endüstri mühendisliği eğitiminin veri bilimi alanında çalışmak isteyen birine hangi açılardan avantaj sağladığını örneklerle belirtiniz.\nCevap :\n\nEndüstri mühendisliği; istatistik, optimizasyon, sistem analizi ve karar verme yöntemleri gibi alanları içerir. Bu konular veri biliminin temelini oluşturan veri analizi ve modelleme süreçleriyle doğrudan ilişkilidir. Endüstri mühendisleri veri analizi yaparak süreçleri optimize etmeye ve karar destek sistemleri geliştirmeye alışkın oldukları için veri bilimi alanına daha kolay adapte olabilirler. Ayrıca problem çözme, süreç iyileştirme ve iş süreçlerini anlama becerileri veri biliminde önemli avantaj sağlar.",
+    "crumbs": [
+      "Çalışma 1"
+    ]
+  },
+  {
+    "objectID": "portfolyo/calisma1.html#çoktan-seçmeli-soru",
+    "href": "portfolyo/calisma1.html#çoktan-seçmeli-soru",
+    "title": "Çalışma 1",
+    "section": "2-Çoktan Seçmeli Soru",
+    "text": "2-Çoktan Seçmeli Soru\nSoru:\nAşağıdakilerden hangisi veri bilimi alanında çalışmak için önemli görülen becerilerden biri değildir?\nA) İstatistik ve olasılık bilgisi\nB) Programlama bilgisi (Python, R vb.)\nC) Veri tabanı ve SQL bilgisi\nD) Mekanik makine tasarımı\nDoğru Cevap:\nD) Mekanik makine tasarımı\nAçıklama:\nVeri bilimi alanında istatistik, programlama ve veri tabanı bilgisi önemliyken mekanik makine tasarımı doğrudan gerekli bir beceri değildir.",
+    "crumbs": [
+      "Çalışma 1"
+    ]
   }
 ]
