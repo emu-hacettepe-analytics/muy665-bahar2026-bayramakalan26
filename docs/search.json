@@ -223,5 +223,85 @@
     "crumbs": [
       "Çalışma 1"
     ]
+  },
+  {
+    "objectID": "portfolyo/calisma2.html#paket-ve-veri-seti",
+    "href": "portfolyo/calisma2.html#paket-ve-veri-seti",
+    "title": "Çalışma 2",
+    "section": "",
+    "text": "# Paketi yükle (sadece ilk seferde) if(!require(dslabs)) install.packages(\"dslabs\") library(dslabs)  # Veri setini yükle data(\"polls_us_election_2016\") data &lt;- polls_us_election_2016  # Veri setinin ilk birkaç satırını görüntüle head(data)",
+    "crumbs": [
+      "Çalışma 2"
+    ]
+  },
+  {
+    "objectID": "portfolyo/calisma2.html#kendi-bilgilerini-tanımla",
+    "href": "portfolyo/calisma2.html#kendi-bilgilerini-tanımla",
+    "title": "Çalışma 2",
+    "section": "",
+    "text": "my_first &lt;- \"Bayram\" my_birth_year &lt;- 1983  # Bilgileri kontrol et my_first my_birth_year",
+    "crumbs": [
+      "Çalışma 2"
+    ]
+  },
+  {
+    "objectID": "portfolyo/calisma2.html#k-değerini-hesaplama",
+    "href": "portfolyo/calisma2.html#k-değerini-hesaplama",
+    "title": "Çalışma 2",
+    "section": "",
+    "text": "k &lt;- (nchar(my_first) + my_birth_year) %% 15 + 8 k\n\nAçıklama: % 15 → 0–14 aralığına sıkıştırır\n+8 → k’nın 8–22 arasında olmasını garanti eder\nHesaplama sonucunda: k = 17 (tek sayı)",
+    "crumbs": [
+      "Çalışma 2"
+    ]
+  },
+  {
+    "objectID": "portfolyo/calisma2.html#k-satırını-gösterme",
+    "href": "portfolyo/calisma2.html#k-satırını-gösterme",
+    "title": "Çalışma 2",
+    "section": "",
+    "text": "if(k %% 2 == 0){   head(data, k) } else{   tail(data, k) }\n\nk tek olduğu için son 17 satır gösterilir.",
+    "crumbs": [
+      "Çalışma 2"
+    ]
+  },
+  {
+    "objectID": "portfolyo/calisma2.html#toplam-ve-sütun-bazlı-na-sayısı",
+    "href": "portfolyo/calisma2.html#toplam-ve-sütun-bazlı-na-sayısı",
+    "title": "Çalışma 2",
+    "section": "",
+    "text": "# Toplam NA sayısı total_na &lt;- sum(is.na(data)) total_na  # Sütun başına NA sayısı (ilk 8 sütun) na_per_column &lt;- sort(colSums(is.na(data)), decreasing = TRUE) head(na_per_column, 8)",
+    "crumbs": [
+      "Çalışma 2"
+    ]
+  },
+  {
+    "objectID": "portfolyo/calisma2.html#na-değerlerini-değiştirip-yeni-veri-seti-oluşturma",
+    "href": "portfolyo/calisma2.html#na-değerlerini-değiştirip-yeni-veri-seti-oluşturma",
+    "title": "Çalışma 2",
+    "section": "",
+    "text": "new_data &lt;- data  # orijinal veri değişmeyecek  # Sayısal sütunlar num_cols &lt;- sapply(new_data, is.numeric) for(col in names(new_data)[num_cols]){   new_data[[col]][is.na(new_data[[col]])] &lt;- my_birth_year + k }  # Karakter ve faktör sütunlar char_factor_cols &lt;- sapply(new_data, function(x) is.character(x) | is.factor(x)) for(col in names(new_data)[char_factor_cols]){   new_data[[col]][is.na(new_data[[col]])] &lt;- paste0(my_first, \"_\", k) }",
+    "crumbs": [
+      "Çalışma 2"
+    ]
+  },
+  {
+    "objectID": "portfolyo/calisma2.html#yeni-veri-setinde-k-satırını-gösterme",
+    "href": "portfolyo/calisma2.html#yeni-veri-setinde-k-satırını-gösterme",
+    "title": "Çalışma 2",
+    "section": "",
+    "text": "if(k %% 2 == 0){   head(new_data, k) } else{   tail(new_data, k) }",
+    "crumbs": [
+      "Çalışma 2"
+    ]
+  },
+  {
+    "objectID": "portfolyo/calisma2.html#yeni-veri-setindeki-na-kontrolü",
+    "href": "portfolyo/calisma2.html#yeni-veri-setindeki-na-kontrolü",
+    "title": "Çalışma 2",
+    "section": "",
+    "text": "# Kalan toplam NA sayısı sum(is.na(new_data))  # anyNA kontrolü anyNA(new_data)\n\nDoğru ise sum(is.na(new_data)) = 0\nanyNA(new_data) = FALSE ✅",
+    "crumbs": [
+      "Çalışma 2"
+    ]
   }
 ]

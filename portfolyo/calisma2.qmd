@@ -2,54 +2,68 @@
 title: "Çalışma 2"
 ---
 
-# 1. Adım Paket yükleme
+# Ödev Taslağı (R Markdown)
 
-if(!require(dslabs)) install.packages("dslabs") library(dslabs)
+```         
+--- title: "R Studio Ödevi" author: "Bayram" date: "`r Sys.Date()`" output: html_document ---  ```{r setup, include=FALSE} knitr::opts_chunk$set(echo = TRUE)
+```
 
-# 2. Adım Veri setini yükleme
+## 1. Paket ve Veri Seti
 
-data("polls_us_election_2016") data \<- polls_us_election_2016
+```         
+# Paketi yükle (sadece ilk seferde) if(!require(dslabs)) install.packages("dslabs") library(dslabs)  # Veri setini yükle data("polls_us_election_2016") data <- polls_us_election_2016  # Veri setinin ilk birkaç satırını görüntüle head(data)
+```
 
-# 3. Adım Kendi bilgilerini tanımlama
+## 2. Kendi Bilgilerini Tanımla
 
-my_first \<- "Bayram" my_birth_year \<- 1983
+```         
+my_first <- "Bayram" my_birth_year <- 1983  # Bilgileri kontrol et my_first my_birth_year
+```
 
-# 4. Adım k değerini hesaplama
+## 3. k Değerini Hesaplama
 
-k \<- (nchar(my_first) + my_birth_year) %% 15 + 8 k \# k = 17
+```         
+k <- (nchar(my_first) + my_birth_year) %% 15 + 8 k
+```
 
-# 5. Adım k satırını gösterme
+-   Açıklama: `% 15` → 0–14 aralığına sıkıştırır
 
-if(k %% 2 == 0){ print(head(data, k)) } else{ print(tail(data, k)) }
+    `+8` → k'nın 8–22 arasında olmasını garanti eder
 
-# 6. Adım Toplam NA sayısı
+    Hesaplama sonucunda: k = 17 (tek sayı)
 
-total_na \<- sum(is.na(data)) total_na
+## 4. k Satırını Gösterme
 
-# 7. Adım Sütun başına NA sayısı (ilk 8 sütun)
+```         
+if(k %% 2 == 0){   head(data, k) } else{   tail(data, k) }
+```
 
-na_per_column \<- sort(colSums(is.na(data)), decreasing = TRUE) head(na_per_column, 8)
+-   k tek olduğu için **son 17 satır** gösterilir.
 
-# 8. Adım NA değerlerini değiştirme (yeni veri çerçevesi)
+## 5. Toplam ve Sütun Bazlı NA Sayısı
 
-new_data \<- data \# orijinal veri değişmeyecek
+```         
+# Toplam NA sayısı total_na <- sum(is.na(data)) total_na  # Sütun başına NA sayısı (ilk 8 sütun) na_per_column <- sort(colSums(is.na(data)), decreasing = TRUE) head(na_per_column, 8)
+```
 
-#      a. Sayısal sütunlar
+## 6. NA Değerlerini Değiştirip Yeni Veri Seti Oluşturma
 
-num_cols \<- sapply(new_data, is.numeric) for(col in names(new_data)\[num_cols\]){ new_data\[\[col\]\]\[is.na(new_data\[\[col\]\])\] \<- my_birth_year + k }
+```         
+new_data <- data  # orijinal veri değişmeyecek  # Sayısal sütunlar num_cols <- sapply(new_data, is.numeric) for(col in names(new_data)[num_cols]){   new_data[[col]][is.na(new_data[[col]])] <- my_birth_year + k }  # Karakter ve faktör sütunlar char_factor_cols <- sapply(new_data, function(x) is.character(x) | is.factor(x)) for(col in names(new_data)[char_factor_cols]){   new_data[[col]][is.na(new_data[[col]])] <- paste0(my_first, "_", k) }
+```
 
-#      b. Karakter ve faktör sütunlar
+## 7. Yeni Veri Setinde k Satırını Gösterme
 
-char_factor_cols \<- sapply(new_data, function(x) is.character(x) \| is.factor(x)) for(col in names(new_data)\[char_factor_cols\]){ new_data\[\[col\]\]\[is.na(new_data\[\[col\]\])\] \<- paste0(my_first, "\_", k) }
+```         
+if(k %% 2 == 0){   head(new_data, k) } else{   tail(new_data, k) }
+```
 
-# 9. Adım Yeni veri setinde k satırını göster
+## 8. Yeni Veri Setindeki NA Kontrolü
 
-if(k %% 2 == 0){ print(head(new_data, k)) } else{ print(tail(new_data, k)) }
+```         
+# Kalan toplam NA sayısı sum(is.na(new_data))  # anyNA kontrolü anyNA(new_data)
+```
 
-# 10. Adım Yeni veri setindeki toplam NA sayısı
+-   Doğru ise **sum(is.na(new_data)) = 0**
 
-sum(is.na(new_data))
-
-# 11. Adım anyNA kontrolü
-
-anyNA(new_data)
+    **anyNA(new_data) = FALSE** ✅
