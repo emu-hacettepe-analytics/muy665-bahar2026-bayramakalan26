@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -383,8 +348,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#a" id="toc-a" class="nav-link active" data-scroll-target="#a">(a)</a></li>
-  <li><a href="#b" id="toc-b" class="nav-link" data-scroll-target="#b">(b)</a></li>
+  <li><a href="#adım-paket-yükleme" id="toc-adım-paket-yükleme" class="nav-link active" data-scroll-target="#adım-paket-yükleme">1. Adım Paket yükleme</a></li>
+  <li><a href="#adım-veri-setini-yükleme" id="toc-adım-veri-setini-yükleme" class="nav-link" data-scroll-target="#adım-veri-setini-yükleme">2. Adım Veri setini yükleme</a></li>
+  <li><a href="#adım-kendi-bilgilerini-tanımlama" id="toc-adım-kendi-bilgilerini-tanımlama" class="nav-link" data-scroll-target="#adım-kendi-bilgilerini-tanımlama">3. Adım Kendi bilgilerini tanımlama</a></li>
+  <li><a href="#adım-k-değerini-hesaplama" id="toc-adım-k-değerini-hesaplama" class="nav-link" data-scroll-target="#adım-k-değerini-hesaplama">4. Adım k değerini hesaplama</a></li>
+  <li><a href="#adım-k-satırını-gösterme" id="toc-adım-k-satırını-gösterme" class="nav-link" data-scroll-target="#adım-k-satırını-gösterme">5. Adım k satırını gösterme</a></li>
+  <li><a href="#adım-toplam-na-sayısı" id="toc-adım-toplam-na-sayısı" class="nav-link" data-scroll-target="#adım-toplam-na-sayısı">6. Adım Toplam NA sayısı</a></li>
+  <li><a href="#adım-sütun-başına-na-sayısı-ilk-8-sütun" id="toc-adım-sütun-başına-na-sayısı-ilk-8-sütun" class="nav-link" data-scroll-target="#adım-sütun-başına-na-sayısı-ilk-8-sütun">7. Adım Sütun başına NA sayısı (ilk 8 sütun)</a></li>
+  <li><a href="#adım-na-değerlerini-değiştirme-yeni-veri-çerçevesi" id="toc-adım-na-değerlerini-değiştirme-yeni-veri-çerçevesi" class="nav-link" data-scroll-target="#adım-na-değerlerini-değiştirme-yeni-veri-çerçevesi">8. Adım NA değerlerini değiştirme (yeni veri çerçevesi)</a></li>
+  <li><a href="#a.-sayısal-sütunlar" id="toc-a.-sayısal-sütunlar" class="nav-link" data-scroll-target="#a.-sayısal-sütunlar">a. Sayısal sütunlar</a></li>
+  <li><a href="#b.-karakter-ve-faktör-sütunlar" id="toc-b.-karakter-ve-faktör-sütunlar" class="nav-link" data-scroll-target="#b.-karakter-ve-faktör-sütunlar">b. Karakter ve faktör sütunlar</a></li>
+  <li><a href="#adım-yeni-veri-setinde-k-satırını-göster" id="toc-adım-yeni-veri-setinde-k-satırını-göster" class="nav-link" data-scroll-target="#adım-yeni-veri-setinde-k-satırını-göster">9. Adım Yeni veri setinde k satırını göster</a></li>
+  <li><a href="#adım-yeni-veri-setindeki-toplam-na-sayısı" id="toc-adım-yeni-veri-setindeki-toplam-na-sayısı" class="nav-link" data-scroll-target="#adım-yeni-veri-setindeki-toplam-na-sayısı">10. Adım Yeni veri setindeki toplam NA sayısı</a></li>
+  <li><a href="#adım-anyna-kontrolü" id="toc-adım-anyna-kontrolü" class="nav-link" data-scroll-target="#adım-anyna-kontrolü">11. Adım anyNA kontrolü</a></li>
   </ul>
 </nav>
 </nav>
@@ -415,20 +391,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><br>
-(Aşağıdakiler örnek olarak verilmiştir.)</p>
-<p>Bu çalışmada 3 görevimiz var. Bu görevler….. Bunlara sırayla aşağıda cevap arıyoruz.</p>
-<section id="a" class="level2">
-<h2 class="anchored" data-anchor-id="a">(a)</h2>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
+<section id="adım-paket-yükleme" class="level1">
+<h1>1. Adım Paket yükleme</h1>
+<p>if(!require(dslabs)) install.packages(“dslabs”) library(dslabs)</p>
 </section>
-<section id="b" class="level2">
-<h2 class="anchored" data-anchor-id="b">(b)</h2>
+<section id="adım-veri-setini-yükleme" class="level1">
+<h1>2. Adım Veri setini yükleme</h1>
+<p>data(“polls_us_election_2016”) data &lt;- polls_us_election_2016</p>
+</section>
+<section id="adım-kendi-bilgilerini-tanımlama" class="level1">
+<h1>3. Adım Kendi bilgilerini tanımlama</h1>
+<p>my_first &lt;- “Bayram” my_birth_year &lt;- 1983</p>
+</section>
+<section id="adım-k-değerini-hesaplama" class="level1">
+<h1>4. Adım k değerini hesaplama</h1>
+<p>k &lt;- (nchar(my_first) + my_birth_year) %% 15 + 8 k # k = 17</p>
+</section>
+<section id="adım-k-satırını-gösterme" class="level1">
+<h1>5. Adım k satırını gösterme</h1>
+<p>if(k %% 2 == 0){ print(head(data, k)) } else{ print(tail(data, k)) }</p>
+</section>
+<section id="adım-toplam-na-sayısı" class="level1">
+<h1>6. Adım Toplam NA sayısı</h1>
+<p>total_na &lt;- sum(is.na(data)) total_na</p>
+</section>
+<section id="adım-sütun-başına-na-sayısı-ilk-8-sütun" class="level1">
+<h1>7. Adım Sütun başına NA sayısı (ilk 8 sütun)</h1>
+<p>na_per_column &lt;- sort(colSums(is.na(data)), decreasing = TRUE) head(na_per_column, 8)</p>
+</section>
+<section id="adım-na-değerlerini-değiştirme-yeni-veri-çerçevesi" class="level1">
+<h1>8. Adım NA değerlerini değiştirme (yeni veri çerçevesi)</h1>
+<p>new_data &lt;- data # orijinal veri değişmeyecek</p>
+</section>
+<section id="a.-sayısal-sütunlar" class="level1">
+<h1>a. Sayısal sütunlar</h1>
+<p>num_cols &lt;- sapply(new_data, is.numeric) for(col in names(new_data)[num_cols]){ new_data[[col]][is.na(new_data[[col]])] &lt;- my_birth_year + k }</p>
+</section>
+<section id="b.-karakter-ve-faktör-sütunlar" class="level1">
+<h1>b. Karakter ve faktör sütunlar</h1>
+<p>char_factor_cols &lt;- sapply(new_data, function(x) is.character(x) | is.factor(x)) for(col in names(new_data)[char_factor_cols]){ new_data[[col]][is.na(new_data[[col]])] &lt;- paste0(my_first, “_”, k) }</p>
+</section>
+<section id="adım-yeni-veri-setinde-k-satırını-göster" class="level1">
+<h1>9. Adım Yeni veri setinde k satırını göster</h1>
+<p>if(k %% 2 == 0){ print(head(new_data, k)) } else{ print(tail(new_data, k)) }</p>
+</section>
+<section id="adım-yeni-veri-setindeki-toplam-na-sayısı" class="level1">
+<h1>10. Adım Yeni veri setindeki toplam NA sayısı</h1>
+<p>sum(is.na(new_data))</p>
+</section>
+<section id="adım-anyna-kontrolü" class="level1">
+<h1>11. Adım anyNA kontrolü</h1>
+<p>anyNA(new_data)</p>
 
 
 </section>

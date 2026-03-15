@@ -128,7 +128,7 @@
     "href": "portfolyo/calisma2.html",
     "title": "Çalışma 2",
     "section": "",
-    "text": "(Aşağıdakiler örnek olarak verilmiştir.)\nBu çalışmada 3 görevimiz var. Bu görevler….. Bunlara sırayla aşağıda cevap arıyoruz.",
+    "text": "1. Adım Paket yükleme\nif(!require(dslabs)) install.packages(“dslabs”) library(dslabs)\n\n\n2. Adım Veri setini yükleme\ndata(“polls_us_election_2016”) data &lt;- polls_us_election_2016\n\n\n3. Adım Kendi bilgilerini tanımlama\nmy_first &lt;- “Bayram” my_birth_year &lt;- 1983\n\n\n4. Adım k değerini hesaplama\nk &lt;- (nchar(my_first) + my_birth_year) %% 15 + 8 k # k = 17\n\n\n5. Adım k satırını gösterme\nif(k %% 2 == 0){ print(head(data, k)) } else{ print(tail(data, k)) }\n\n\n6. Adım Toplam NA sayısı\ntotal_na &lt;- sum(is.na(data)) total_na\n\n\n7. Adım Sütun başına NA sayısı (ilk 8 sütun)\nna_per_column &lt;- sort(colSums(is.na(data)), decreasing = TRUE) head(na_per_column, 8)\n\n\n8. Adım NA değerlerini değiştirme (yeni veri çerçevesi)\nnew_data &lt;- data # orijinal veri değişmeyecek\n\n\na. Sayısal sütunlar\nnum_cols &lt;- sapply(new_data, is.numeric) for(col in names(new_data)[num_cols]){ new_data[[col]][is.na(new_data[[col]])] &lt;- my_birth_year + k }\n\n\nb. Karakter ve faktör sütunlar\nchar_factor_cols &lt;- sapply(new_data, function(x) is.character(x) | is.factor(x)) for(col in names(new_data)[char_factor_cols]){ new_data[[col]][is.na(new_data[[col]])] &lt;- paste0(my_first, “_”, k) }\n\n\n9. Adım Yeni veri setinde k satırını göster\nif(k %% 2 == 0){ print(head(new_data, k)) } else{ print(tail(new_data, k)) }\n\n\n10. Adım Yeni veri setindeki toplam NA sayısı\nsum(is.na(new_data))\n\n\n11. Adım anyNA kontrolü\nanyNA(new_data)\n\n\n\n\n Back to top",
     "crumbs": [
       "Çalışma 2"
     ]

@@ -2,15 +2,54 @@
 title: "Çalışma 2"
 ---
 
-\
-(Aşağıdakiler örnek olarak verilmiştir.)
+# 1. Adım Paket yükleme
 
-Bu çalışmada 3 görevimiz var. Bu görevler..... Bunlara sırayla aşağıda cevap arıyoruz.
+if(!require(dslabs)) install.packages("dslabs") library(dslabs)
 
-## (a)
+# 2. Adım Veri setini yükleme
 
-```{r}
-1 + 1
-```
+data("polls_us_election_2016") data \<- polls_us_election_2016
 
-## (b)
+# 3. Adım Kendi bilgilerini tanımlama
+
+my_first \<- "Bayram" my_birth_year \<- 1983
+
+# 4. Adım k değerini hesaplama
+
+k \<- (nchar(my_first) + my_birth_year) %% 15 + 8 k \# k = 17
+
+# 5. Adım k satırını gösterme
+
+if(k %% 2 == 0){ print(head(data, k)) } else{ print(tail(data, k)) }
+
+# 6. Adım Toplam NA sayısı
+
+total_na \<- sum(is.na(data)) total_na
+
+# 7. Adım Sütun başına NA sayısı (ilk 8 sütun)
+
+na_per_column \<- sort(colSums(is.na(data)), decreasing = TRUE) head(na_per_column, 8)
+
+# 8. Adım NA değerlerini değiştirme (yeni veri çerçevesi)
+
+new_data \<- data \# orijinal veri değişmeyecek
+
+#      a. Sayısal sütunlar
+
+num_cols \<- sapply(new_data, is.numeric) for(col in names(new_data)\[num_cols\]){ new_data\[\[col\]\]\[is.na(new_data\[\[col\]\])\] \<- my_birth_year + k }
+
+#      b. Karakter ve faktör sütunlar
+
+char_factor_cols \<- sapply(new_data, function(x) is.character(x) \| is.factor(x)) for(col in names(new_data)\[char_factor_cols\]){ new_data\[\[col\]\]\[is.na(new_data\[\[col\]\])\] \<- paste0(my_first, "\_", k) }
+
+# 9. Adım Yeni veri setinde k satırını göster
+
+if(k %% 2 == 0){ print(head(new_data, k)) } else{ print(tail(new_data, k)) }
+
+# 10. Adım Yeni veri setindeki toplam NA sayısı
+
+sum(is.na(new_data))
+
+# 11. Adım anyNA kontrolü
+
+anyNA(new_data)
