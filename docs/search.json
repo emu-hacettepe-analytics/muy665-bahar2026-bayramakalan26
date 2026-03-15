@@ -159,5 +159,19 @@
     "title": "My Blog",
     "section": "",
     "text": "Bu sayfa yapım aşamasındadır.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "about.html#projects",
+    "href": "about.html#projects",
+    "title": "Hakkımda",
+    "section": "# Projects",
+    "text": "# Projects"
+  },
+  {
+    "objectID": "about.html#publications",
+    "href": "about.html#publications",
+    "title": "Hakkımda",
+    "section": "# Publications",
+    "text": "# Publications"
   }
 ]
