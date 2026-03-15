@@ -16,7 +16,7 @@ Bu verilerin analiz edilmesi ve karar destek sistemlerine dönüştürülmesi ve
 
 Veri bilimi; istatistik, programlama ve iş bilgisi gibi alanların birleşimi olarak açıklanıyor.
 
-### 2. Endüstri mühendisliği ile veri bilimi ilişkisi 
+### 2. Endüstri mühendisliği ile veri bilimi ilişkisi
 
 Endüstri mühendisliğinin zaten optimizasyon, istatistik ve sistem analizi gibi temelleri olduğu için veri bilimine yakın olduğu vurgulanıyor.
 
@@ -56,12 +56,12 @@ Konuşmacılar:
 
 -   GitHub/portföy oluşturmak,
 
--    Matematik ve istatistik temelini güçlü tutmak.
+-   Matematik ve istatistik temelini güçlü tutmak.
 
 Özetle video;\
 veri bilimi alanının ne olduğu, endüstri mühendisliği ile bağlantısı, bu alanda çalışmak için gerekli yetkinlikler ve kariyer tavsiyeleri üzerine yapılan bir sohbet niteliğinde.
 
-## (b)
+## (b) Videodan üretilen Sorular
 
 ## 1-Açık Uçlu Soru
 
