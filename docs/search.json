@@ -2,23 +2,23 @@
   {
     "objectID": "proje.html",
     "href": "proje.html",
-    "title": "Proje X (proje adını yazınız)",
+    "title": "Ankara Trafik Yoğunluğu ve Seyahat Süresi Analizi",
     "section": "",
-    "text": "Projemizle ilgili güncellemelerden haberdar olmak için bu xxxxx bağlantısındaki proje sayfamızı takip edin.\n(Aşağıdaki başlıklar örnek olarak verilmiştir; lütfen gerektiği şekilde düzenlemekten çekinmeyin.)"
+    "text": "Ankara, Türkiye’nin en yoğun nüfuslu şehirlerinden biridir ve trafik yoğunluğu günlük yaşamı doğrudan etkilemektedir. Özellikle işe gidiş ve dönüş saatlerinde yaşanan trafik artışı, ulaşım sürelerini uzatmakta ve şehir içi mobiliteyi zorlaştırmaktadır.\nBu çalışmanın amacı, Ankara’daki trafik yoğunluğu verilerini analiz ederek:\n\nTrafik yoğunluğunun aylara göre değişimini incelemek\nOrtalama araç hızındaki değişimleri değerlendirmek\nTrafik yoğunluğu ile seyahat süresi arasındaki ilişkiyi ortaya koymak\nPik trafik saatlerini belirlemek\n\nolarak belirlenmiştir."
   },
   {
     "objectID": "proje.html#veri-kaynağı",
     "href": "proje.html#veri-kaynağı",
-    "title": "Proje X (proje adını yazınız)",
-    "section": "2.1 Veri Kaynağı",
-    "text": "2.1 Veri Kaynağı\nxxxxxx"
+    "title": "Ankara Trafik Yoğunluğu ve Seyahat Süresi Analizi",
+    "section": "Veri Kaynağı",
+    "text": "Veri Kaynağı\nBu çalışmada kullanılan trafik verileri, Ankara trafik yoğunluğu verileri ve TomTom Traffic Index platformundaki açık trafik göstergeleri temel alınarak oluşturulmuştur.\nKaynaklar:\n-TomTom Traffic Index \n  https://www.tomtom.com/traffic-index/\n-Ankara Büyükşehir Belediyesi Açık Veri Portalı \n  https://seffaf.ankara.bel.tr/\nVeri seti, proje kapsamında analiz ve görselleştirme amacıyla düzenlenmiş ve yeniden yapılandırılmıştır."
   },
   {
     "objectID": "proje.html#veri-hakkında-genel-bilgiler",
     "href": "proje.html#veri-hakkında-genel-bilgiler",
-    "title": "Proje X (proje adını yazınız)",
-    "section": "2.2 Veri Hakkında Genel Bilgiler",
-    "text": "2.2 Veri Hakkında Genel Bilgiler\nxxxxxx"
+    "title": "Ankara Trafik Yoğunluğu ve Seyahat Süresi Analizi",
+    "section": "Veri Hakkında Genel Bilgiler",
+    "text": "Veri Hakkında Genel Bilgiler\nKullanılan Kütüphaneler;\nlibrary(tidyverse)\nlibrary(readr)\nlibrary(ggplot2)\nVerinin Yüklenmesi\nData &lt;- read.csv(“ankara_trafik.csv”)\nHead(data)\nKeşifsel Veri Analizi (EDA)\nVeri Yapısı\nStr(data)\n\nSummary(data)\nAnaliz sonucunda veri setinde eksik veri bulunmadığı görülmüştür. Trafik yoğunluğu, ortalama hız ve seyahat süresi değişkenleri analiz için uygun yapıdadır.\nTrafik Yoğunluğunun Aylara Göre Analizi\nggplot(data, aes(x=month, \ny=congestion_index)) +\n  geom_col() +\n  labs(\n  title = “Aylara Göre Trafik Yoğunluğu”,\n    x = “Ay”,\n    y = “Yoğunluk İndeksi”\n  )\nGrafik incelendiğinde trafik yoğunluğunun özellikle yaz aylarına yaklaşırken arttığı görülmektedir. En yüksek yoğunluk Ekim ayında gözlenmiştir.\nOrtalama Hız Analizi\nggplot(data, aes(x=month, y=average_speed_kmh, group=1)) +\n  geom_line() +\n  geom_point() +\n  labs(\n    title = “Aylara Göre Ortalama Araç Hızı”,\n    x = “Ay”,\n    y = “Ortalama Hız (km/h)”\n  )\nTrafik yoğunluğu arttıkça ortalama araç hızında düşüş gözlenmektedir. Özellikle yoğun dönemlerde şehir içi ulaşım hızının ciddi şekilde azaldığı görülmektedir.\nTrafik Yoğunluğu ve Seyahat Süresi İlişkisi\nggplot(data, aes(x=congestion_index, y=average_travel_time_min)) +\n  geom_point(size=3) +\n  geom_smooth(method=”lm”, se=FALSE) +\n  labs(\n    title = “Trafik Yoğunluğu ve Seyahat Süresi İlişkisi”,\n    x = “Yoğunluk İndeksi”,\n    y = “Seyahat Süresi (dk)”\n  )\nGrafik, trafik yoğunluğu arttıkça seyahat süresinin de arttığını göstermektedir. Bu durum trafik yoğunluğu ile seyahat süresi arasında pozitif yönlü bir ilişki olduğunu ortaya koymaktadır.\nPik Trafik Saatleri\ntable(data$peak_hour)\nAnaliz sonuçlarına göre Ankara’da trafik yoğunluğunun en fazla olduğu saatler genellikle 18:00 ve 19:00 saatleridir. Bu durum mesai çıkış saatleriyle uyumludur.\nKorelasyon Analizi\ncor(\n  data$congestion_index,\n  data$average_travel_time_min\n)\nKorelasyon sonucu, trafik yoğunluğu ile seyahat süresi arasında güçlü bir ilişki olduğunu göstermektedir.\nBulgular\nBu çalışma kapsamında elde edilen temel bulgular aşağıdaki gibidir:\n\nTrafik yoğunluğu yıl içerisinde değişkenlik göstermektedir.\nOrtalama araç hızları trafik yoğunluğu arttıkça düşmektedir.\nTrafik yoğunluğu ile seyahat süresi arasında pozitif ilişki bulunmaktadır.\nEn yoğun trafik saatleri akşam mesai çıkışına denk gelmektedir.\nAnkara’da şehir içi ulaşım yoğunluğu özellikle sonbahar döneminde artış göstermektedir.\n\nSonuç\nBu çalışmada Ankara trafik yoğunluğu verileri analiz edilmiştir. Yapılan analizler sonucunda trafik yoğunluğu ile seyahat süresi arasında anlamlı bir ilişki olduğu gözlenmiştir.\nKazanımlar:\n\nŞehir planlama,\nTrafik yönetimi,\nToplu taşıma optimizasyonu\n\ngibi alanlarda karar destek mekanizmaları açısından önemli bilgiler sunmaktadır.\nGelecek çalışmalarda:\n\nGerçek zamanlı trafik verileri,\nMeteorolojik veriler,\nNüfus yoğunluğu,\nÖzel gün ve etkinlik etkileri\n\ngibi ek değişkenler kullanılarak daha kapsamlı analizler gerçekleştirilebilir.\nKAYNAKÇA\n\nAnkara Büyükşehir Belediyesi Açık Veri Portalı\nTomTom Traffic Index\nR Programming Language\nQuarto Documentation\n\nYapay Zekâ Kullanım Beyanı\nBu çalışmanın hazırlanması sırasında veri analizi, raporlama yapısı ve kod geliştirme süreçlerinde üretken yapay zekâ araçlarından destek alınmıştır. Nihai içerik gözden geçirilmiş ve akademik değerlendirme kullanıcılar tarafından yapılmıştır.\nProjemizle ilgili güncellemelerden haberdar olmak için bu xxxxx bağlantısındaki proje sayfamızı takip edin."
   },
   {
     "objectID": "proje.html#tercih-sebebi",
