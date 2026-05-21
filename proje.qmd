@@ -66,16 +66,16 @@ Kullanılan Kütüphaneler;
 
 *library(ggplot2)*
 
-**Verinin Yüklenmesi**
+### Verinin Yüklenmesi
 
 ```         
 Data <- read.csv(“ankara_trafik.csv”)
 Head(data)
 ```
 
-**Keşifsel Veri Analizi (EDA)**
+## Keşifsel Veri Analizi (EDA)
 
-**Veri Yapısı**
+### Veri Yapısı
 
 ```         
 Str(data)
@@ -85,7 +85,7 @@ Summary(data)
 
 Analiz sonucunda veri setinde eksik veri bulunmadığı görülmüştür. Trafik yoğunluğu, ortalama hız ve seyahat süresi değişkenleri analiz için uygun yapıdadır.
 
-**Trafik Yoğunluğunun Aylara Göre Analizi**
+### Trafik Yoğunluğunun Aylara Göre Analizi
 
 ```         
 ggplot(data, aes(x=month, 
@@ -100,7 +100,7 @@ y=congestion_index)) +
 
 Grafik incelendiğinde trafik yoğunluğunun özellikle yaz aylarına yaklaşırken arttığı görülmektedir. En yüksek yoğunluk Ekim ayında gözlenmiştir.
 
-**Ortalama Hız Analizi**
+### Ortalama Hız Analizi
 
 ```         
 ggplot(data, aes(x=month, y=average_speed_kmh, group=1)) +
@@ -115,7 +115,7 @@ ggplot(data, aes(x=month, y=average_speed_kmh, group=1)) +
 
 Trafik yoğunluğu arttıkça ortalama araç hızında düşüş gözlenmektedir. Özellikle yoğun dönemlerde şehir içi ulaşım hızının ciddi şekilde azaldığı görülmektedir.
 
-**Trafik Yoğunluğu ve Seyahat Süresi İlişkisi**
+### Trafik Yoğunluğu ve Seyahat Süresi İlişkisi
 
 ```         
 ggplot(data, aes(x=congestion_index, y=average_travel_time_min)) +
@@ -130,7 +130,7 @@ ggplot(data, aes(x=congestion_index, y=average_travel_time_min)) +
 
 Grafik, trafik yoğunluğu arttıkça seyahat süresinin de arttığını göstermektedir. Bu durum trafik yoğunluğu ile seyahat süresi arasında pozitif yönlü bir ilişki olduğunu ortaya koymaktadır.
 
-**Pik Trafik Saatleri**
+### Pik Trafik Saatleri
 
 ```         
 table(data$peak_hour)
@@ -138,7 +138,7 @@ table(data$peak_hour)
 
 Analiz sonuçlarına göre Ankara’da trafik yoğunluğunun en fazla olduğu saatler genellikle 18:00 ve 19:00 saatleridir. Bu durum mesai çıkış saatleriyle uyumludur.
 
-**Korelasyon Analizi**
+### Korelasyon Analizi
 
 ```         
 cor(
@@ -149,7 +149,7 @@ cor(
 
 Korelasyon sonucu, trafik yoğunluğu ile seyahat süresi arasında güçlü bir ilişki olduğunu göstermektedir.
 
-**Bulgular**
+# Bulgular
 
 Bu çalışma kapsamında elde edilen temel bulgular aşağıdaki gibidir:
 
@@ -163,11 +163,11 @@ Bu çalışma kapsamında elde edilen temel bulgular aşağıdaki gibidir:
 
 -   Ankara’da şehir içi ulaşım yoğunluğu özellikle sonbahar döneminde artış göstermektedir.
 
-**Sonuç**
+# Sonuç
 
 Bu çalışmada Ankara trafik yoğunluğu verileri analiz edilmiştir. Yapılan analizler sonucunda trafik yoğunluğu ile seyahat süresi arasında anlamlı bir ilişki olduğu gözlenmiştir.
 
-**Kazanımlar:**
+## Kazanımlar:
 
 -   Şehir planlama,
 
@@ -189,7 +189,7 @@ gibi alanlarda karar destek mekanizmaları açısından önemli bilgiler sunmakt
 
 gibi ek değişkenler kullanılarak daha kapsamlı analizler gerçekleştirilebilir.
 
-**KAYNAKÇA**
+# KAYNAKÇA
 
 -   Ankara Büyükşehir Belediyesi Açık Veri Portalı
 
@@ -199,6 +199,6 @@ gibi ek değişkenler kullanılarak daha kapsamlı analizler gerçekleştirilebi
 
 -   Quarto Documentation
 
-**Yapay Zekâ Kullanım Beyanı**
+## Yapay Zekâ Kullanım Beyanı
 
 Bu çalışmanın hazırlanması sırasında veri analizi, raporlama yapısı ve kod geliştirme süreçlerinde üretken yapay zekâ araçlarından destek alınmıştır. Nihai içerik gözden geçirilmiş ve akademik değerlendirme tarafımızca yapılmıştır.

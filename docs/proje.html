@@ -141,7 +141,28 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#veri-seti" id="toc-veri-seti" class="nav-link" data-scroll-target="#veri-seti">Veri Seti</a>
   <ul class="collapse">
   <li><a href="#veri-kaynağı" id="toc-veri-kaynağı" class="nav-link" data-scroll-target="#veri-kaynağı">Veri Kaynağı</a></li>
-  <li><a href="#veri-hakkında-genel-bilgiler" id="toc-veri-hakkında-genel-bilgiler" class="nav-link" data-scroll-target="#veri-hakkında-genel-bilgiler">Veri Hakkında Genel Bilgiler</a></li>
+  <li><a href="#veri-hakkında-genel-bilgiler" id="toc-veri-hakkında-genel-bilgiler" class="nav-link" data-scroll-target="#veri-hakkında-genel-bilgiler">Veri Hakkında Genel Bilgiler</a>
+  <ul class="collapse">
+  <li><a href="#verinin-yüklenmesi" id="toc-verinin-yüklenmesi" class="nav-link" data-scroll-target="#verinin-yüklenmesi">Verinin Yüklenmesi</a></li>
+  </ul></li>
+  <li><a href="#keşifsel-veri-analizi-eda" id="toc-keşifsel-veri-analizi-eda" class="nav-link" data-scroll-target="#keşifsel-veri-analizi-eda">Keşifsel Veri Analizi (EDA)</a>
+  <ul class="collapse">
+  <li><a href="#veri-yapısı" id="toc-veri-yapısı" class="nav-link" data-scroll-target="#veri-yapısı">Veri Yapısı</a></li>
+  <li><a href="#trafik-yoğunluğunun-aylara-göre-analizi" id="toc-trafik-yoğunluğunun-aylara-göre-analizi" class="nav-link" data-scroll-target="#trafik-yoğunluğunun-aylara-göre-analizi">Trafik Yoğunluğunun Aylara Göre Analizi</a></li>
+  <li><a href="#ortalama-hız-analizi" id="toc-ortalama-hız-analizi" class="nav-link" data-scroll-target="#ortalama-hız-analizi">Ortalama Hız Analizi</a></li>
+  <li><a href="#trafik-yoğunluğu-ve-seyahat-süresi-ilişkisi" id="toc-trafik-yoğunluğu-ve-seyahat-süresi-ilişkisi" class="nav-link" data-scroll-target="#trafik-yoğunluğu-ve-seyahat-süresi-ilişkisi">Trafik Yoğunluğu ve Seyahat Süresi İlişkisi</a></li>
+  <li><a href="#pik-trafik-saatleri" id="toc-pik-trafik-saatleri" class="nav-link" data-scroll-target="#pik-trafik-saatleri">Pik Trafik Saatleri</a></li>
+  <li><a href="#korelasyon-analizi" id="toc-korelasyon-analizi" class="nav-link" data-scroll-target="#korelasyon-analizi">Korelasyon Analizi</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#bulgular" id="toc-bulgular" class="nav-link" data-scroll-target="#bulgular">Bulgular</a></li>
+  <li><a href="#sonuç" id="toc-sonuç" class="nav-link" data-scroll-target="#sonuç">Sonuç</a>
+  <ul class="collapse">
+  <li><a href="#kazanımlar" id="toc-kazanımlar" class="nav-link" data-scroll-target="#kazanımlar">Kazanımlar:</a></li>
+  </ul></li>
+  <li><a href="#kaynakça" id="toc-kaynakça" class="nav-link" data-scroll-target="#kaynakça">KAYNAKÇA</a>
+  <ul class="collapse">
+  <li><a href="#yapay-zekâ-kullanım-beyanı" id="toc-yapay-zekâ-kullanım-beyanı" class="nav-link" data-scroll-target="#yapay-zekâ-kullanım-beyanı">Yapay Zekâ Kullanım Beyanı</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -240,16 +261,23 @@ ul.task-list li input[type="checkbox"] {
 <p><em>library(tidyverse)</em></p>
 <p><em>library(readr)</em></p>
 <p><em>library(ggplot2)</em></p>
-<p><strong>Verinin Yüklenmesi</strong></p>
+<section id="verinin-yüklenmesi" class="level3">
+<h3 class="anchored" data-anchor-id="verinin-yüklenmesi">Verinin Yüklenmesi</h3>
 <pre><code>Data &lt;- read.csv(“ankara_trafik.csv”)
 Head(data)</code></pre>
-<p><strong>Keşifsel Veri Analizi (EDA)</strong></p>
-<p><strong>Veri Yapısı</strong></p>
+</section>
+</section>
+<section id="keşifsel-veri-analizi-eda" class="level2">
+<h2 class="anchored" data-anchor-id="keşifsel-veri-analizi-eda">Keşifsel Veri Analizi (EDA)</h2>
+<section id="veri-yapısı" class="level3">
+<h3 class="anchored" data-anchor-id="veri-yapısı">Veri Yapısı</h3>
 <pre><code>Str(data)
 
 Summary(data)</code></pre>
 <p>Analiz sonucunda veri setinde eksik veri bulunmadığı görülmüştür. Trafik yoğunluğu, ortalama hız ve seyahat süresi değişkenleri analiz için uygun yapıdadır.</p>
-<p><strong>Trafik Yoğunluğunun Aylara Göre Analizi</strong></p>
+</section>
+<section id="trafik-yoğunluğunun-aylara-göre-analizi" class="level3">
+<h3 class="anchored" data-anchor-id="trafik-yoğunluğunun-aylara-göre-analizi">Trafik Yoğunluğunun Aylara Göre Analizi</h3>
 <pre><code>ggplot(data, aes(x=month, 
 y=congestion_index)) +
   geom_col() +
@@ -259,7 +287,9 @@ y=congestion_index)) +
     y = “Yoğunluk İndeksi”
   )</code></pre>
 <p>Grafik incelendiğinde trafik yoğunluğunun özellikle yaz aylarına yaklaşırken arttığı görülmektedir. En yüksek yoğunluk Ekim ayında gözlenmiştir.</p>
-<p><strong>Ortalama Hız Analizi</strong></p>
+</section>
+<section id="ortalama-hız-analizi" class="level3">
+<h3 class="anchored" data-anchor-id="ortalama-hız-analizi">Ortalama Hız Analizi</h3>
 <pre><code>ggplot(data, aes(x=month, y=average_speed_kmh, group=1)) +
   geom_line() +
   geom_point() +
@@ -269,7 +299,9 @@ y=congestion_index)) +
     y = “Ortalama Hız (km/h)”
   )</code></pre>
 <p>Trafik yoğunluğu arttıkça ortalama araç hızında düşüş gözlenmektedir. Özellikle yoğun dönemlerde şehir içi ulaşım hızının ciddi şekilde azaldığı görülmektedir.</p>
-<p><strong>Trafik Yoğunluğu ve Seyahat Süresi İlişkisi</strong></p>
+</section>
+<section id="trafik-yoğunluğu-ve-seyahat-süresi-ilişkisi" class="level3">
+<h3 class="anchored" data-anchor-id="trafik-yoğunluğu-ve-seyahat-süresi-ilişkisi">Trafik Yoğunluğu ve Seyahat Süresi İlişkisi</h3>
 <pre><code>ggplot(data, aes(x=congestion_index, y=average_travel_time_min)) +
   geom_point(size=3) +
   geom_smooth(method=”lm”, se=FALSE) +
@@ -279,16 +311,24 @@ y=congestion_index)) +
     y = “Seyahat Süresi (dk)”
   )</code></pre>
 <p>Grafik, trafik yoğunluğu arttıkça seyahat süresinin de arttığını göstermektedir. Bu durum trafik yoğunluğu ile seyahat süresi arasında pozitif yönlü bir ilişki olduğunu ortaya koymaktadır.</p>
-<p><strong>Pik Trafik Saatleri</strong></p>
+</section>
+<section id="pik-trafik-saatleri" class="level3">
+<h3 class="anchored" data-anchor-id="pik-trafik-saatleri">Pik Trafik Saatleri</h3>
 <pre><code>table(data$peak_hour)</code></pre>
 <p>Analiz sonuçlarına göre Ankara’da trafik yoğunluğunun en fazla olduğu saatler genellikle 18:00 ve 19:00 saatleridir. Bu durum mesai çıkış saatleriyle uyumludur.</p>
-<p><strong>Korelasyon Analizi</strong></p>
+</section>
+<section id="korelasyon-analizi" class="level3">
+<h3 class="anchored" data-anchor-id="korelasyon-analizi">Korelasyon Analizi</h3>
 <pre><code>cor(
   data$congestion_index,
   data$average_travel_time_min
 )</code></pre>
 <p>Korelasyon sonucu, trafik yoğunluğu ile seyahat süresi arasında güçlü bir ilişki olduğunu göstermektedir.</p>
-<p><strong>Bulgular</strong></p>
+</section>
+</section>
+</section>
+<section id="bulgular" class="level1">
+<h1>Bulgular</h1>
 <p>Bu çalışma kapsamında elde edilen temel bulgular aşağıdaki gibidir:</p>
 <ul>
 <li><p>Trafik yoğunluğu yıl içerisinde değişkenlik göstermektedir.</p></li>
@@ -297,9 +337,12 @@ y=congestion_index)) +
 <li><p>En yoğun trafik saatleri akşam mesai çıkışına denk gelmektedir.</p></li>
 <li><p>Ankara’da şehir içi ulaşım yoğunluğu özellikle sonbahar döneminde artış göstermektedir.</p></li>
 </ul>
-<p><strong>Sonuç</strong></p>
+</section>
+<section id="sonuç" class="level1">
+<h1>Sonuç</h1>
 <p>Bu çalışmada Ankara trafik yoğunluğu verileri analiz edilmiştir. Yapılan analizler sonucunda trafik yoğunluğu ile seyahat süresi arasında anlamlı bir ilişki olduğu gözlenmiştir.</p>
-<p><strong>Kazanımlar:</strong></p>
+<section id="kazanımlar" class="level2">
+<h2 class="anchored" data-anchor-id="kazanımlar">Kazanımlar:</h2>
 <ul>
 <li><p>Şehir planlama,</p></li>
 <li><p>Trafik yönetimi,</p></li>
@@ -314,14 +357,18 @@ y=congestion_index)) +
 <li><p>Özel gün ve etkinlik etkileri</p></li>
 </ul>
 <p>gibi ek değişkenler kullanılarak daha kapsamlı analizler gerçekleştirilebilir.</p>
-<p><strong>KAYNAKÇA</strong></p>
+</section>
+</section>
+<section id="kaynakça" class="level1">
+<h1>KAYNAKÇA</h1>
 <ul>
 <li><p>Ankara Büyükşehir Belediyesi Açık Veri Portalı</p></li>
 <li><p>TomTom Traffic Index</p></li>
 <li><p>R Programming Language</p></li>
 <li><p>Quarto Documentation</p></li>
 </ul>
-<p><strong>Yapay Zekâ Kullanım Beyanı</strong></p>
+<section id="yapay-zekâ-kullanım-beyanı" class="level2">
+<h2 class="anchored" data-anchor-id="yapay-zekâ-kullanım-beyanı">Yapay Zekâ Kullanım Beyanı</h2>
 <p>Bu çalışmanın hazırlanması sırasında veri analizi, raporlama yapısı ve kod geliştirme süreçlerinde üretken yapay zekâ araçlarından destek alınmıştır. Nihai içerik gözden geçirilmiş ve akademik değerlendirme tarafımızca yapılmıştır.</p>
 
 
