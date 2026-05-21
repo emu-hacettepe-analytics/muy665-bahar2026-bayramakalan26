@@ -201,4 +201,4 @@ gibi ek değişkenler kullanılarak daha kapsamlı analizler gerçekleştirilebi
 
 **Yapay Zekâ Kullanım Beyanı**
 
-Bu çalışmanın hazırlanması sırasında veri analizi, raporlama yapısı ve kod geliştirme süreçlerinde üretken yapay zekâ araçlarından destek alınmıştır. Nihai içerik gözden geçirilmiş ve akademik değerlendirme kullanıcılar tarafından yapılmıştır.
+Bu çalışmanın hazırlanması sırasında veri analizi, raporlama yapısı ve kod geliştirme süreçlerinde üretken yapay zekâ araçlarından destek alınmıştır. Nihai içerik gözden geçirilmiş ve akademik değerlendirme tarafımızca yapılmıştır.
