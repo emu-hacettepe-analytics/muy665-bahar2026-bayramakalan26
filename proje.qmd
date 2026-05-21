@@ -1,7 +1,8 @@
 ---
 title: "Ankara Trafik Yoğunluğu ve Seyahat Süresi Analizi"
 author-title: "HAZIRLAYANLAR"
-author: "Bayram AKALAN & Cihan COŞKUN"
+author: "**HAZIRLAYANLAR**  
+        Bayram AKALAN & Cihan COŞKUN"   
 format:
   html:
     code-fold: true
