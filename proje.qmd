@@ -60,91 +60,106 @@ Veri seti, proje kapsamında analiz ve görselleştirme amacıyla düzenlenmiş 
 
 Kullanılan Kütüphaneler;
 
-*library(tidyverse)*
-
-*library(readr)*
-
-*library(ggplot2)*
+```{r}
+library(tidyverse)
+library(readr)
+library(ggplot2)
+```
 
 ### Verinin Yüklenmesi
 
-```         
-Data <- read.csv(“ankara_trafik.csv”)
-Head(data)
+```{r}
+trafik <- read.csv("ankara_trafik.csv")
+head(trafik)
 ```
 
 ## Keşifsel Veri Analizi (EDA)
 
 ### Veri Yapısı
+```{r}
+str(trafik)
 
-```         
-Str(data)
-
-Summary(data)
+summary(trafik)
 ```
 
 Analiz sonucunda veri setinde eksik veri bulunmadığı görülmüştür. Trafik yoğunluğu, ortalama hız ve seyahat süresi değişkenleri analiz için uygun yapıdadır.
 
 ### Trafik Yoğunluğunun Aylara Göre Analizi
 
-```         
-ggplot(data, aes(x=month, 
-y=congestion_index)) +
+```{r}
+ggplot(trafik, aes(x = month, y = congestion_index)) +
   geom_col() +
   labs(
-  title = “Aylara Göre Trafik Yoğunluğu”,
-    x = “Ay”,
-    y = “Yoğunluk İndeksi”
-  )
+    title = "Aylara Göre Trafik Yoğunluğu",
+    x = "Ay",
+    y = "Yoğunluk İndeksi"
+  ) +
+  theme_minimal()
 ```
 
 Grafik incelendiğinde trafik yoğunluğunun özellikle yaz aylarına yaklaşırken arttığı görülmektedir. En yüksek yoğunluk Ekim ayında gözlenmiştir.
 
 ### Ortalama Hız Analizi
 
-```         
-ggplot(data, aes(x=month, y=average_speed_kmh, group=1)) +
-  geom_line() +
-  geom_point() +
+```{r}
+ggplot(trafik, aes(x = month, y = average_speed_kmh, group = 1)) +
+  geom_line(linewidth = 1) +
+  geom_point(size = 3) +
   labs(
-    title = “Aylara Göre Ortalama Araç Hızı”,
-    x = “Ay”,
-    y = “Ortalama Hız (km/h)”
-  )
+    title = "Aylara Göre Ortalama Araç Hızı",
+    x = "Ay",
+    y = "Ortalama Hız (km/h)"
+  ) +
+  theme_minimal()
 ```
 
 Trafik yoğunluğu arttıkça ortalama araç hızında düşüş gözlenmektedir. Özellikle yoğun dönemlerde şehir içi ulaşım hızının ciddi şekilde azaldığı görülmektedir.
 
 ### Trafik Yoğunluğu ve Seyahat Süresi İlişkisi
 
-```         
-ggplot(data, aes(x=congestion_index, y=average_travel_time_min)) +
-  geom_point(size=3) +
-  geom_smooth(method=”lm”, se=FALSE) +
+```{r}
+ggplot(trafik, aes(x = congestion_index, y = average_travel_time_min)) +
+  geom_point(size = 3) +
+  geom_smooth(method = "lm", se = FALSE) +
   labs(
-    title = “Trafik Yoğunluğu ve Seyahat Süresi İlişkisi”,
-    x = “Yoğunluk İndeksi”,
-    y = “Seyahat Süresi (dk)”
-  )
+    title = "Trafik Yoğunluğu ve Seyahat Süresi İlişkisi",
+    x = "Trafik Yoğunluğu",
+    y = "Seyahat Süresi (dk)"
+  ) +
+  theme_minimal()
 ```
 
 Grafik, trafik yoğunluğu arttıkça seyahat süresinin de arttığını göstermektedir. Bu durum trafik yoğunluğu ile seyahat süresi arasında pozitif yönlü bir ilişki olduğunu ortaya koymaktadır.
 
 ### Pik Trafik Saatleri
 
-```         
-table(data$peak_hour)
+```{r}
+ggplot(trafik, aes(x = peak_hour)) +
+  geom_bar() +
+  labs(
+    title = "Pik Trafik Saatleri",
+    x = "Saat",
+    y = "Gözlem Sayısı"
+  ) +
+  theme_minimal()
 ```
 
 Analiz sonuçlarına göre Ankara’da trafik yoğunluğunun en fazla olduğu saatler genellikle 18:00 ve 19:00 saatleridir. Bu durum mesai çıkış saatleriyle uyumludur.
 
 ### Korelasyon Analizi
 
-```         
-cor(
-  data$congestion_index,
-  data$average_travel_time_min
-)
+```{r}
+ggplot(trafik,
+       aes(x = congestion_index,
+           y = average_travel_time_min)) +
+  geom_point(size = 3) +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(
+    title = "Trafik Yoğunluğu ve Seyahat Süresi Arasındaki İlişki",
+    x = "Trafik Yoğunluğu",
+    y = "Seyahat Süresi (dk)"
+  ) +
+  theme_minimal()
 ```
 
 Korelasyon sonucu, trafik yoğunluğu ile seyahat süresi arasında güçlü bir ilişki olduğunu göstermektedir.
