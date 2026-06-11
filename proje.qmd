@@ -70,6 +70,15 @@ library(ggplot2)
 
 ```{r}
 trafik <- read.csv("ankara_trafik.csv")
+
+trafik$month <- factor(
+  trafik$month,
+  levels = c(
+    "Jan","Feb","Mar","Apr","May","Jun",
+    "Jul","Aug","Sep","Oct","Nov","Dec"
+  )
+)
+
 head(trafik)
 ```
 
